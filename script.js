@@ -1482,7 +1482,7 @@ $(".footer").each(function (index) {
 function menuAnimation() {
   let tl = gsap.timeline({ paused: true });
   tl.from(".nav_link-block", {
-    y: "140%",
+    y: "150%",
     stagger: { each: 0.2, from: "end" },
     ease: "power2.out",
     duration: 0.4,
