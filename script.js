@@ -550,6 +550,43 @@ $(".grid.is-accelerating").each(function (index) {
   );
 });
 
+// Our Story scroll into view
+$(".story_section").each(function (index) {
+  let triggerElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      start: "top 90%"
+    }
+  });
+  tl.from(".stripe.is-story", {
+    width: "0%",
+    ease: "power2.in",
+    duration: 0.6
+  });
+  tl.from(
+    ".h5_about.is-story .word",
+    {
+      y: "-120%",
+      stagger: { each: 0.1 },
+      ease: "expo.inOut",
+      duration: 0.8
+    },
+    0.2
+  );
+  tl.from(
+    ".sm_p-wrapper.is-story",
+    {
+      opacity: 0,
+      y: 100,
+      ease: "power3.out",
+      duration: 0.8
+    },
+    0.4
+  );
+});
+
 // Vargas X scroll into view
 $(".vargasx_section").each(function (index) {
   let triggerElement = $(this);
