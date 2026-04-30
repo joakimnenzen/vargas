@@ -330,6 +330,20 @@ $(".grid.grid--text-imggallery").each(function (index) {
       start: "top 90%"
     }
   });
+    tl.from(".stripe.is-built", {
+    width: "0%",
+    ease: "power2.in",
+    duration: 0.6
+  });
+  tl.from(
+    ".built_heading",
+    {
+      y: "-100%",
+      ease: "expo.out",
+      duration: 0.4
+    },
+    0
+  );
   tl.from(
     "._7-8_img-wrapper.is-gallery",
     {
