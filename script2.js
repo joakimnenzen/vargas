@@ -218,7 +218,7 @@ $(".company_wrapper").each(function (index) {
     );
 });
 
-// Text + Image block Scroll into view
+// Vargas scroll into view
 $(".container.is-text_img").each(function (index) {
   let triggerElement = $(this);
 
