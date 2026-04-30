@@ -219,7 +219,7 @@ $(".company_wrapper").each(function (index) {
 });
 
 // Text + Image block Scroll into view
-$(".grid.grid--text-img").each(function (index) {
+$(".container.is-text_img").each(function (index) {
   let triggerElement = $(this);
 
   let tl = gsap.timeline({
@@ -242,6 +242,18 @@ $(".grid.grid--text-img").each(function (index) {
     },
     0
   );
+});
+
+// Text + Image block Scroll into view
+$(".grid.grid--text-img").each(function (index) {
+  let triggerElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      start: "top 90%"
+    }
+  });
   tl.from("._7-8_img-wrapper.is-78", {
     scale: 1.2,
     opacity: 0,
@@ -344,20 +356,6 @@ $(".grid.grid--text-imggallery").each(function (index) {
       start: "top 90%"
     }
   });
-    tl.from(".stripe.is-built", {
-    width: "0%",
-    ease: "power2.in",
-    duration: 0.6
-  });
-  tl.from(
-    ".built_heading",
-    {
-      y: "-100%",
-      ease: "expo.out",
-      duration: 0.4
-    },
-    0
-  );
   tl.from(
     "._7-8_img-wrapper.is-gallery",
     {
