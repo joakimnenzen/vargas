@@ -219,7 +219,7 @@ $(".company_wrapper").each(function (index) {
 });
 
 // Vargas scroll into view
-$(".container.is-text_img").each(function (index) {
+$(".built_heading_wrap").each(function (index) {
   let triggerElement = $(this);
 
   let tl = gsap.timeline({
